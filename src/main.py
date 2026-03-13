@@ -8,6 +8,6 @@ def main():
     if basepath is None:
         basepath = "/"
     #generate_page("./content/index.md","./template.html","./public/index.html")
-    copystat("static/", "public/")
-    generate_pages_recursive("./content","template.html","public/")
+    copystat("/home/neil/sitegen/static", "./public")
+    #generate_pages_recursive("/home/neil/sitegen/content","/home/neil/sitegen/template.html","public/")
 main()
