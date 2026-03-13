@@ -1,6 +1,7 @@
 import os, pathlib
 from markdown import markdown_to_html_node
 from extract import extract_title
+
 def generate_page(from_path, template_path, dest_path):
     print(f"Generating from {from_path} to {dest_path} using {template_path}")
     os.makedirs(os.path.dirname(dest_path),exist_ok=True)
