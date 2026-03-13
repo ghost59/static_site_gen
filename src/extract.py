@@ -7,10 +7,9 @@ def extract_markdown_links(text):
     matches = re.findall(pattern, text)
     return matches
 def extract_title(markdown: str):
-    if markdown.startswith("#"):
-        text = markdown
-        text.strip("#")
-        return text
-    else:
-        raise Exception("boy!!!!!")
+    lines = markdown.split("\n")
+    for line in lines:
+        if line.startswith("# "):
+            return line[2:].strip()
+        raise Exception("no h1 header found")
     

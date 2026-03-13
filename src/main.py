@@ -9,5 +9,5 @@ def main():
         basepath = "/"
     #generate_page("./content/index.md","./template.html","./public/index.html")
     copystat("static/", "public/")
-    generate_pages_recursive(basepath,"template.html","public/")
+    generate_pages_recursive("./content","template.html","public/")
 main()
